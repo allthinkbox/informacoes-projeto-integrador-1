@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/*fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+    font-family: 'Dun Rise';
+    src: url(fontes/Dune_Rise.otf) format('opentype');
+    font-weight: normal;
+}
+
+/*variaveis (cores e fontes)*/
+:root{
+    /*Cores*/
+    --branco: #ffffff;
+    --laranja: #D9AD29;
+    --azul-claro: #0F808C;
+    --azul-escuro: #1E3040;
+    --roxo: #733C64;
+    --verde: #008000;
+    --cinza: #484848;
+    --cinza-claro: #D9D9D9;
+
+    /*Fontes*/
+    --fonte-destaque:'Dun Rise', sans-serif;
+    --fonte-padrao: 'Montserrat', sans-serif;
+}
+
+/*configurações globais*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--azul-escuro);
+}
+
+.img-logo{
+    width: 50%;
+}
+
+h1{
+    font-family: var(--fonte-destaque);
+    color: var(--branco);
+}
+
+p{
+    font-family: var(--fonte-padrao);
+    color: var(--branco);
+}
+
+.progress-bar{
+    --progress: 50;
+    height: 10px;
+    width: 204px;
+    background-color: #ccc;
+    display: flex;
+  }
+
+.progress-bar::before{
+    content: '';
+    width: calc(var(--progress) * 1%);
+    background-color: var(--verde);
+}
+
+span{
+    color: var(--cinza);
+}
+
+.container{
+    display: flex;
+    justify-content: ;
+    margin-top: 20px;
+}
+
+.card{
+    width: 33%;
+}
+
+ul{
+    list-style-position: inside;
+}
+
+li{
+    color: #ffffff;
+    display: ;
+}
