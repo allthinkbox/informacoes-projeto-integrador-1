@@ -4,6 +4,8 @@
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
     /*fontes*/
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 
     @font-face {
         font-family: 'Dun Rise';
@@ -28,6 +30,10 @@
         --fonte-padrao: 'Montserrat', sans-serif;
     }
 
+    ::selection{
+        background-color: var(--azul-claro);
+    }
+
     /*configurações globais*/
     * {
         margin: 0px;
@@ -38,21 +44,11 @@
         background-color: var(--azul-escuro);
     }
 
-    img{
-        display: block;
-        margin: auto;
+    a{
+        text-decoration: none;
     }
-
-    h1{
-        font-family: var(--fonte-destaque);
-        color: var(--branco);
-        text-align: center;
-        font-weight: normal;
-        font-size: 1.5em;
-        margin-bottom: 50px;
-    }
-
 }
+
 @media (min-width:480px) {
     /* smartphones, Android phones, landscape iPhone */
 }
@@ -65,8 +61,269 @@
     /* tablet, landscape iPad, lo-res laptops ands desktops */
 
 }
+
 @media (min-width:1025px) {
     /* big landscape tablets, laptops, and desktops */
+
+    .escopo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+        padding-bottom: 50px;
+        border-bottom: 1px solid var(--roxo);
+    }
+
+    h1 {
+        color: var(--branco);
+        font-family: var(--fonte-destaque);
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .escopo-filho2{
+        order: 1;
+        align-self: center;
+        padding-top: 70px;
+    }
+
+    #progress{
+        display: flex;
+        align-self: center;
+    }
+
+    .progress-bar {
+        --progress: 72;
+        height: 15px;
+        width: 204px;
+        background-color: #ccc;
+        display: flex;
+        color: var(--cinza-claro);
+        font-family: var(--fonte-padrao);
+        font-size: 0.7em;
+        font-weight: 100;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .progress-bar::before {
+        content: 'Progress: 72%';
+        width: calc(var(--progress) * 1%);
+        background-color: var(--verde);
+        padding-top: 1px;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    #steps {
+        color: var(--cinza);
+        font-family: var(--fonte-padrao);
+        font-size: 0.85em;
+        padding-left: 10px;
+    }
+
+    #escopo-filho-3{
+        align-self: flex-end;
+        padding-top: 50px;
+    }
+
+    #equipe{
+        color: var(--branco);
+        font-family: var(--fonte-padrao);
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .equipe1{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        color: var(--branco);
+    }
+
+    .equipe1 > p{
+        color: var(--branco);
+        font-family: var(--fonte-padrao);
+        font-size: 1em;
+        line-height: 50px;
+        padding-right: 20px;
+    }
+
+    .login{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        border-bottom: 1px solid var(--roxo);
+        padding-bottom: 70px;
+    }
+    
+    .logins{
+        border: 1px solid var(--laranja);
+        border-radius: 10px;
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 50px;
+        padding: 40px;
+    }
+
+    .logins:hover{
+        box-shadow: 0px 0px 10px #d9ad29be;
+    }
+
+    .lista-logins{
+        list-style-type: none;
+        columns: 2;
+    }
+
+    .lista-logins > li{
+        color: var(--branco);
+        font-family: var(--fonte-padrao);
+        font-weight: normal;
+        font-size: 1em;
+        line-height: 50px;
+    }
+
+    h2{
+        color: var(--laranja);
+        font-family: var(--fonte-padrao);
+        font-weight: normal;
+        font-size: 1.3em;
+    }
+
+    .botoes{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+        border-bottom: 1px solid var(--roxo);
+        padding-bottom: 70px;
+    }
+
+    .documentacao{
+        border: 1px solid var(--laranja);
+        border-radius: 10px;
+        width: 466px;
+        height: 290px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .documentacao:hover{
+        box-shadow: 0px 0px 10px #d9ad29be;
+    }
+
+    .desenvolvimento{
+        border: 1px solid var(--laranja);
+        border-radius: 10px;
+        width: 466px;
+        height: 290px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .desenvolvimento:hover{
+        box-shadow: 0px 0px 10px #d9ad29be;
+    }
+
+    .btn{
+        background-color: var(--azul-claro);
+        color: var(--branco);
+        font-family: var(--fonte-padrao);
+        font-weight: normal;
+        font-size: 0.9em;
+        border-radius: 20px;
+        padding: 8px;
+        width: 200px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 20px;
+        padding-left: 50px;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color: #14334eb0;
+        box-shadow: 0 0 10px #0f7f8c65;
+        color: var(--cinza);
+        transition-duration: 1s;
+    }
+
+    .link-prototype{
+        color: var(--azul-claro);
+        font-family: var(--fonte-padrao);
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    .link-prototype:hover{
+        color: #0f7f8ccf;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .etapas{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    .etapas p{
+        font-family: var(--fonte-padrao);
+        color: var(--branco);
+        font-size: 1em;
+        font-weight: normal;
+        padding: 20px 0px 20px 0px;
+    }
+
+    #etapa{
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .etapas-informacoes{
+        width: 932px;
+        border: 1px solid var(--laranja);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+
+    .etapas-informacoes:hover{
+        box-shadow: 0px 0px 10px #d9ad29be;
+    }
+
+    footer > p{
+        color: var(--roxo);
+        font-family: var(--fonte-destaque);
+        font-weight: normal;
+        font-size: 1.2em;
+        text-align: center;
+        padding: 20px;
+    }
 }
 
 @media (min-width:1281px) {
