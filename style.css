@@ -387,7 +387,7 @@
     }
 
     .progress-bar {
-        --progress: 72;
+        --progress: 73;
         height: 15px;
         width: 204px;
         background-color: #ccc;
@@ -401,7 +401,7 @@
     }
 
     .progress-bar::before {
-        content: 'Progress: 72%';
+        content: 'Progress: 73%';
         width: calc(var(--progress) * 1%);
         background-color: var(--verde);
         padding-top: 1px;
